@@ -140,7 +140,7 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('dist-to-crx', () => {
-  gulp.src('dist/**')
+  gulp.src('dist')
     .pipe($.crxPack({
       privateKey: fs.readFileSync('./app.pem', 'utf8'),
       filename: 'new-tab-' + manifest.version + '.crx'
